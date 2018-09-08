@@ -21,7 +21,7 @@ public class RobotMap {
 	public static final int MID_RIGHT_MOTOR_PORT = 0;
 	public static final int BOT_RIGHT_MOTOR_PORT = 0;
 
-	// Right motor ports		
+	// Left motor ports		
 	public static final int FRONT_LEFT_MOTOR_PORT = 0;
 	public static final int MID_LEFT_MOTOR_PORT = 0;
 	public static final int BOT_LEFT_MOTOR_PORT = 0;
