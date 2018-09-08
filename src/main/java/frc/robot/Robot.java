@@ -388,21 +388,23 @@ public class Robot extends IterativeRobot {
 	 * to the switch structure below with additional strings & commands.
 	 */
 
-	/*
+	
 	@Override
 	public void autonomousInit() {
-		new CheckScaleSide();
-		motionProfileRunner.control();
+		//new CheckScaleSide();
+		//motionProfileRunner.control();
 		gyro.reset();
 		driveTrain.resetEncoders();
 		int auto = (int) SmartDashboard.getNumber("DB/Slider 0", 0);
 		switch (auto){
-		case 0:
+			case 0:
 			autonomousCommand = null;
 			break;
 		case 1:
-			autonomousCommand = new AutoDriveToLine();
-			break;
+			autonomousCommand = new ForwardTest();
+			break;		
+		
+		/*
 		case 2:
 			autonomousCommand = new AutoMidSwitchProfiling();
 			break;
@@ -463,15 +465,20 @@ public class Robot extends IterativeRobot {
 		case 9009:
 			autonomousCommand = new ReturnHome();
 			break;
+		*/
+
 		}
 
+		/*
 		// schedule the autonomous command (example)
 		if (autonomousCommand != null) {
 			if (RobotMap.ELEVATOR_PID) elevator.setToGoal();
 			autonomousCommand.start();
 		}
+		*/
+
 	}
-	*/
+	/*
 
 	/**
 	 * This function is called periodically during autonomous.
