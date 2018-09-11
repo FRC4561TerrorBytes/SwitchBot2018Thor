@@ -45,7 +45,7 @@ public class Robot extends IterativeRobot {
 	public static OI oi;
 	//public static final ElevatorPID elevator = new ElevatorPID();
 	public static final ArmPID arm = new ArmPID();
-	//public static final Intake intake = new Intake();
+	public static final Intake intake = new Intake();
 	public static final Gyroscope gyro = new Gyroscope();
 	public static CameraServer cam;
 	//public static final Encoder testEncoder = new Encoder(0, 1);
@@ -123,7 +123,7 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void disabledInit() {
-		//intake.stop();
+		intake.stop();
 		//elevator.resetGoal();
 		arm.resetGoal();
 		driveTrain.stop();
@@ -133,7 +133,7 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void disabledPeriodic() {
 		Scheduler.getInstance().run();
-		//intake.stop();
+		intake.stop();
 		//elevator.resetGoal();
 		arm.resetGoal();
 		driveTrain.stop();
