@@ -43,8 +43,8 @@ public class RobotMap {
 	public static final int TRANSMISSION_SOLENOID_PORT = 0;
 	public static final int TRANSMISSION_SOLENOID_PORT_TWO = 1;
 	//public static final int TRANSMISSION_SOLENOID_TWO_PORT = 0; Copied over from delta, not needed now
-	public static final int TRANSMISSION_SPEED_BUTTON = 1;//1 is a placeholder
-	public static final int TRANSMISSION_TORQUE_BUTTON = 0;//0 is a placeholder
+	public static final int TRANSMISSION_SPEED_BUTTON = 5;//same buttons on the old driver station
+	public static final int TRANSMISSION_TORQUE_BUTTON = 3;//same buttons on the old driver station
 	//public static final int TRANSMISSION_SOLENOID_TWO_PORT_TWO = 0; Copied over from delta, not needed now
 	public static final int PCM = 10;
 
