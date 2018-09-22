@@ -263,7 +263,7 @@ public class Robot extends IterativeRobot {
     	else {
     		SmartDashboard.putString("DB/String 1", "!!Drivetrain PID: OFF!!");
     	}
-    	/*
+    	
     	if (arm.getEncoderPosition()==0&&!arm.getFwdSwitch()) {
     		//0 position on the arm is where the forward limit switch is
     		armHealthy = false;
@@ -277,7 +277,7 @@ public class Robot extends IterativeRobot {
     		armHealthy = true;
     		SmartDashboard.putString("DB/String 8", "Arm Healthy");
 		}
-		*/
+		
 		/*
     	if (elevator.getElevatorPos() == 0) { //Bottom position of the elevator is 29 - we should never hit 0
     		elevatorHealthy = false;
