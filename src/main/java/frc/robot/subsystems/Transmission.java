@@ -22,9 +22,11 @@ public class Transmission extends Subsystem {
 	private Solenoid funSolenoid = new Solenoid(RobotMap.PCM, 4); //This exists because the compressor doesn't run without a solenoid in the code
 	public Transmission() {
 	}
-	
-	public void initDefaultCommand() {}
-	
+	*/
+	public void initDefaultCommand() {
+
+	}
+	/*
 	
 	
 	public void torqueGear() {
@@ -69,5 +71,5 @@ public class Transmission extends Subsystem {
 	public boolean isTorque() {
 		return doubleSolenoidTransLeft.get()==DoubleSolenoid.Value.kForward;
 	}
+	*/
 }
-*/
