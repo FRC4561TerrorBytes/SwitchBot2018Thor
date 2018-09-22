@@ -7,8 +7,17 @@ package frc.robot;
  * floating around.
  */
 public class RobotMap {
-	public static final int RIGHT_JOYSTICK_PORT = 0;
+
+	// Joystick Ports
+	public static final int RIGHT_JOYSTICK_PORT = 1;
 	public static final int LEFT_JOYSTICK_PORT = 0;
+
+	// Buttons
+	public static final int RELEASE_BUTTON = 0;
+	public static final int INTAKE_BUTTON = 0;
+
+	public static final int INTAKE_POSITION_BUTTON = 0;
+	public static final int RELEASE_POSITION_BUTTON = 0;
 	
 	// Joystick configuration
 	public static final double RIGHT_JOYSTICK_DEAD_ZONE = 0.25;
@@ -27,7 +36,7 @@ public class RobotMap {
 	public static final int BOT_LEFT_MOTOR_PORT = 3;
 	
 	// Drive mode
-	public static final int DRIVE_MODE = 1; // 1 is arcade drive, 0 is tank drive
+	public static final int DRIVE_MODE = 0; // 1 is arcade drive, 0 is tank drive
 	
 	//Transmission ports
 	public static final int PCM_PORT = 0;

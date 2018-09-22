@@ -14,7 +14,8 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  */
 public class Transmission extends Subsystem {
 	
-	
+	//	Only uncomment the following lines if RobotMap.java has been configures to the correct ports of the PCM and the Solenoid Ports
+	/*
 	private DoubleSolenoid doubleSolenoidTransLeft = new DoubleSolenoid(RobotMap.PCM, RobotMap.TRANSMISSION_SOLENOID_PORT, RobotMap.TRANSMISSION_SOLENOID_PORT_TWO);
 	private DoubleSolenoid doubleSolenoidTransRight = new DoubleSolenoid(RobotMap.PCM, RobotMap.TRANSMISSION_SOLENOID_TWO_PORT, RobotMap.TRANSMISSION_SOLENOID_TWO_PORT_TWO);
 	@SuppressWarnings("unused")
@@ -69,3 +70,4 @@ public class Transmission extends Subsystem {
 		return doubleSolenoidTransLeft.get()==DoubleSolenoid.Value.kForward;
 	}
 }
+*/
