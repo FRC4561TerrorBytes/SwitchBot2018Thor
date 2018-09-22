@@ -15,18 +15,16 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 public class Transmission extends Subsystem {
 	
 	//	Only uncomment the following lines if RobotMap.java has been configures to the correct ports of the PCM and the Solenoid Ports
-	/*
+	
 	private DoubleSolenoid doubleSolenoidTransLeft = new DoubleSolenoid(RobotMap.PCM, RobotMap.TRANSMISSION_SOLENOID_PORT, RobotMap.TRANSMISSION_SOLENOID_PORT_TWO);
-	private DoubleSolenoid doubleSolenoidTransRight = new DoubleSolenoid(RobotMap.PCM, RobotMap.TRANSMISSION_SOLENOID_TWO_PORT, RobotMap.TRANSMISSION_SOLENOID_TWO_PORT_TWO);
+	//private DoubleSolenoid doubleSolenoidTransRight = new DoubleSolenoid(RobotMap.PCM, RobotMap.TRANSMISSION_SOLENOID_TWO_PORT, RobotMap.TRANSMISSION_SOLENOID_TWO_PORT_TWO);
 	@SuppressWarnings("unused")
 	private Solenoid funSolenoid = new Solenoid(RobotMap.PCM, 4); //This exists because the compressor doesn't run without a solenoid in the code
 	public Transmission() {
 	}
-	*/
-	public void initDefaultCommand() {
-
-	}
-	/*
+	
+	public void initDefaultCommand() {}
+	
 	
 	
 	public void torqueGear() {
@@ -36,7 +34,7 @@ public class Transmission extends Subsystem {
 		
 		
 		doubleSolenoidTransLeft.set(DoubleSolenoid.Value.kForward);
-		doubleSolenoidTransRight.set(DoubleSolenoid.Value.kForward);
+		//doubleSolenoidTransRight.set(DoubleSolenoid.Value.kForward);
 		
 		
 	}
@@ -51,7 +49,7 @@ public class Transmission extends Subsystem {
   			System.out.println("[Transmission] Switching to high speed gear...");
 		}
   			doubleSolenoidTransLeft.set(DoubleSolenoid.Value.kReverse);
-  			doubleSolenoidTransRight.set(DoubleSolenoid.Value.kReverse);
+  			//doubleSolenoidTransRight.set(DoubleSolenoid.Value.kReverse);
 		
 	
 	}
@@ -65,11 +63,10 @@ public class Transmission extends Subsystem {
   			System.out.println("[Transmission] Robot stops");
 		}
   			doubleSolenoidTransLeft.set(DoubleSolenoid.Value.kOff);
-  			doubleSolenoidTransRight.set(DoubleSolenoid.Value.kOff);
+  			//doubleSolenoidTransRight.set(DoubleSolenoid.Value.kOff);
 		
 	}
 	public boolean isTorque() {
 		return doubleSolenoidTransLeft.get()==DoubleSolenoid.Value.kForward;
 	}
-	*/
 }

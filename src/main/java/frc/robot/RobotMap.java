@@ -39,14 +39,14 @@ public class RobotMap {
 	public static final int DRIVE_MODE = 0; // 1 is arcade drive, 0 is tank drive
 	
 	//Transmission ports
-	public static final int PCM_PORT = 0;
+	//public static final int PCM_PORT = 0; Commented out for now, not sure what it does
 	public static final int TRANSMISSION_SOLENOID_PORT = 0;
-	public static final int TRANSMISSION_SOLENOID_PORT_TWO = 0;
-	public static final int TRANSMISSION_SOLENOID_TWO_PORT = 0;
-	public static final int TRANSMISSION_SPEED_BUTTON = 0;
-	public static final int TRANSMISSION_TORQUE_BUTTON = 0;
-	public static final int TRANSMISSION_SOLENOID_TWO_PORT_TWO = 0;
-	public static final int PCM = 0;
+	public static final int TRANSMISSION_SOLENOID_PORT_TWO = 1;
+	//public static final int TRANSMISSION_SOLENOID_TWO_PORT = 0; Copied over from delta, not needed now
+	public static final int TRANSMISSION_SPEED_BUTTON = 1;//1 is a placeholder
+	public static final int TRANSMISSION_TORQUE_BUTTON = 0;//0 is a placeholder
+	//public static final int TRANSMISSION_SOLENOID_TWO_PORT_TWO = 0; Copied over from delta, not needed now
+	public static final int PCM = 10;
 
 	// Arm ports
 	public static final int ARM_MOTOR_1_PORT = 0;
