@@ -70,3 +70,4 @@ public class Transmission extends Subsystem {
 		return doubleSolenoidTransLeft.get()==DoubleSolenoid.Value.kForward;
 	}
 }
+	

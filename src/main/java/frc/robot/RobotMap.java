@@ -48,9 +48,13 @@ public class RobotMap {
 	//public static final int TRANSMISSION_SOLENOID_TWO_PORT_TWO = 0; Copied over from delta, not needed now
 	public static final int PCM = 10;
 
-	// Arm ports
-	public static final int ARM_MOTOR_1_PORT = 0;
+	// Arm port
+	public static final int ARM_MOTOR_1_PORT = 9;
 
+	// Intake ports
+	public static final int Intake_MOTOR_PORT_1 = 7;
+	public static final int Intake_MOTOR_PORT_2 = 8;
+	
 	// Debug variables
 	public static final boolean MASTER_DEBUG = true;
 	@SuppressWarnings("unused")
