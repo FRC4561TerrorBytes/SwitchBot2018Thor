@@ -123,9 +123,9 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void disabledInit() {
-		intake.stop();
+		//intake.stop();
 		//elevator.resetGoal();
-		arm.resetGoal();
+		//arm.resetGoal();
 		driveTrain.stop();
 		//motionProfileOnboardRunner.reset();
 	}
@@ -133,12 +133,12 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void disabledPeriodic() {
 		Scheduler.getInstance().run();
-		intake.stop();
+		//intake.stop();
 		//elevator.resetGoal();
-		arm.resetGoal();
+		//arm.resetGoal();
 		driveTrain.stop();
 		//arm.resetEncoder();
-		arm.clear();
+		//arm.clear();
 	}
 		
 	public void robotPeriodic(){
@@ -146,13 +146,15 @@ public class Robot extends IterativeRobot {
 		//motionProfileOnboardRunner.control();
 		gyro.checkGyro();
 		if (RobotMap.ARM_DEBUG){
+			/*
 			SmartDashboard.putNumber("Arm/Encoder Position", Robot.arm.getEncoderPosition());
 	    	SmartDashboard.putNumber("Arm/Encoder Velocity", Robot.arm.getEncoderVelocity());
 	    	SmartDashboard.putNumber("Arm/Goal Position", Robot.arm.getGoal());
 	    	SmartDashboard.putBoolean("Arm/Forward Limit Switch", Robot.arm.getFwdSwitch());
 	    	SmartDashboard.putBoolean("Arm/Reverse Limit switch", Robot.arm.getRevSwitch());
 	    	SmartDashboard.putNumber("Arm/Motor Voltage", Robot.arm.getVoltage());
-	    	SmartDashboard.putNumber("Arm/Velocity Goal", Robot.arm.getVGoal());
+			SmartDashboard.putNumber("Arm/Velocity Goal", Robot.arm.getVGoal());
+			*/
 		}
     	/*
 		if (RobotMap.ELEVATOR_DEBUG){
@@ -193,7 +195,7 @@ public class Robot extends IterativeRobot {
     	SmartDashboard.putNumber("Drive Throttle/Drive Train Right Front Throttle", Robot.driveTrain.fRThrottle());
     	SmartDashboard.putNumber("Drive Throttle/Drive Train Right Mid Throttle", Robot.driveTrain.mRThrottle());
     	SmartDashboard.putNumber("Drive Throttle/Drive Train Right Rear Throttle", Robot.driveTrain.rRThrottle());
-    	SmartDashboard.putNumber("Motor Current/Arm", Robot.arm.getCurrent());
+    	//SmartDashboard.putNumber("Motor Current/Arm", Robot.arm.getCurrent());
     	//SmartDashboard.putNumber("Motor Current/Elevator Master", Robot.elevator.getCurrentOne());
     	//SmartDashboard.putNumber("Motor Current/Elevator Slave", Robot.elevator.getCurrentTwo());
     	
@@ -234,9 +236,11 @@ public class Robot extends IterativeRobot {
 		*/
 
     	//SmartDashboard.putNumber("Controller POV", oi.getControllerPOV());
-    	if (Robot.arm.getRevSwitch()){
+		/*
+		if (Robot.arm.getRevSwitch()){
 			Robot.arm.setEncoderPos(-1560);
 		}
+		*/
     	if (RobotMap.ARM_PID){
     		SmartDashboard.putString("DB/String 3", "Arm PID: ON");
     	}
@@ -259,7 +263,7 @@ public class Robot extends IterativeRobot {
     	else {
     		SmartDashboard.putString("DB/String 1", "!!Drivetrain PID: OFF!!");
     	}
-    	
+    	/*
     	if (arm.getEncoderPosition()==0&&!arm.getFwdSwitch()) {
     		//0 position on the arm is where the forward limit switch is
     		armHealthy = false;
@@ -273,7 +277,7 @@ public class Robot extends IterativeRobot {
     		armHealthy = true;
     		SmartDashboard.putString("DB/String 8", "Arm Healthy");
 		}
-		
+		*/
 		/*
     	if (elevator.getElevatorPos() == 0) { //Bottom position of the elevator is 29 - we should never hit 0
     		elevatorHealthy = false;
@@ -358,7 +362,7 @@ public class Robot extends IterativeRobot {
     		if (brownoutPrevention) {
     			SmartDashboard.putString("DB/String 4", "!!BROWNOUT PREVENTION!!");
     			driveTrain.limit();
-    			arm.limit();
+    			//arm.limit();
     			//elevator.limit();
     		}
     		else SmartDashboard.putString("DB/String 4", "!!NEAR BROWNOUT!!");
@@ -367,7 +371,7 @@ public class Robot extends IterativeRobot {
     		SmartDashboard.putString("DB/String 4", "Battery healthy");
     		if (brownoutPrevention) {
 	    		driveTrain.unlimit();
-	    		arm.unlimit();
+	    		//arm.unlimit();
 	    		//elevator.unlimit();
     		}
     	}
@@ -493,7 +497,7 @@ public class Robot extends IterativeRobot {
 	}
 	*/
 
-	/*
+	
 	@SuppressWarnings("unused")
 	@Override
 	public void teleopInit() {
@@ -504,15 +508,15 @@ public class Robot extends IterativeRobot {
 		if (autonomousCommand != null) {
 			autonomousCommand.cancel();
 		}
-		motionProfileOnboardRunner.reset();
+		//motionProfileOnboardRunner.reset();
 		if (RobotMap.DRIVE_MODE == 1) (new ArcadeDrive()).start();
 		else (new TankDrive()).start();
-		(new ResetElevator()).start();
-		(new ElevatorDrive()).start();
-		(new ArmDrive()).start();
-		(new IntakeDrive()).start();
+		//(new ResetElevator()).start();
+		//(new ElevatorDrive()).start();
+		//(new ArmDrive()).start();
+		//(new IntakeDrive()).start();
 	}
-	*/
+	
 
 	/**
 	 * This function is called periodically during operator control.

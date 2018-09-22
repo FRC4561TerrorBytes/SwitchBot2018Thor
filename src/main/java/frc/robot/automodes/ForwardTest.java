@@ -16,7 +16,7 @@ public class ForwardTest extends CommandGroup {
 	public ForwardTest() {
 		// torque mode
 		addSequential(new SpeedGear());
-		addSequential(new ArmVertical());
+		//addSequential(new ArmVertical());
 		// wait preassigned time
 		addSequential(new DriveMagic(150, 150));
 //		addSequential(new WaitCommand(3));

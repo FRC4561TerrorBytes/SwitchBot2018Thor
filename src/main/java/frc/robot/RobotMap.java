@@ -36,7 +36,7 @@ public class RobotMap {
 	public static final int BOT_LEFT_MOTOR_PORT = 3;
 	
 	// Drive mode
-	public static final int DRIVE_MODE = 0; // 1 is arcade drive, 0 is tank drive
+	public static final int DRIVE_MODE = 1; // 1 is arcade drive, 0 is tank drive
 	
 	//Transmission ports
 	//public static final int PCM_PORT = 0; Commented out for now, not sure what it does
@@ -52,9 +52,9 @@ public class RobotMap {
 	public static final int ARM_MOTOR_1_PORT = 9;
 
 	// Intake ports
-	public static final int Intake_MOTOR_PORT_1 = 7;
-	public static final int Intake_MOTOR_PORT_2 = 8;
-	
+	public static final int INTAKE_MOTOR_PORT_1 = 7;
+	public static final int INTAKE_MOTOR_PORT_2 = 8;
+
 	// Debug variables
 	public static final boolean MASTER_DEBUG = true;
 	@SuppressWarnings("unused")

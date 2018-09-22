@@ -17,6 +17,7 @@ import com.ctre.phoenix.motorcontrol.FeedbackDevice;
  *
  */
 public class ArmPID extends Subsystem {
+	
 	private WPI_TalonSRX motorOne;
 	private int goal = -120;
 	private int velGoal = 0;
@@ -101,9 +102,11 @@ public class ArmPID extends Subsystem {
 			System.out.println("[Subsystem] ArmPID: Up to Up Position");
 		}
 	}
+	
 	/**
      * Gets the encoder position of the arm.
      */
+	
     public void setToGoal(){
     	motorOne.selectProfileSlot(0, 0);
     	motorOne.configClosedloopRamp(0.2, 0);
@@ -131,10 +134,12 @@ public class ArmPID extends Subsystem {
     }
     public void resetFlow() {
     	goal = motorOne.getSelectedSensorPosition(0)+ (int) (1.25*motorOne.getSelectedSensorVelocity(0));
-    }
+	}
+	
     /**
      * Gets the encoder velocity of the arm.
      */
+	
     public void resetGoal(){
     	goal = motorOne.getSelectedSensorPosition(0);
     	if (RobotMap.ARM_PID) motorOne.set(ControlMode.Position, goal);
@@ -147,7 +152,8 @@ public class ArmPID extends Subsystem {
     }
     public void stop(){
     	motorOne.set(ControlMode.PercentOutput, 0);
-    }
+	}
+	
 	@Override
 	protected void initDefaultCommand() {
 		//setDefaultCommand(new ArmDrive());
@@ -175,4 +181,5 @@ public class ArmPID extends Subsystem {
 	public double getCurrent(){
 		return motorOne.getOutputCurrent();
 	}
+	
 }
