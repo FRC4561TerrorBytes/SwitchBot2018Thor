@@ -16,8 +16,8 @@ import edu.wpi.first.wpilibj.Joystick;
 public class OI {
 	private static Joystick leftStick = new Joystick (RobotMap.LEFT_JOYSTICK_PORT);
 	private static Joystick rightStick = new Joystick (RobotMap.RIGHT_JOYSTICK_PORT);
-	private JoystickButton shiftSpeedButton = new JoystickButton(leftStick, RobotMap.TRANSMISSION_SPEED_BUTTON);
-	private JoystickButton shiftTorqueButton = new JoystickButton(leftStick, RobotMap.TRANSMISSION_TORQUE_BUTTON);
+	private JoystickButton shiftSpeedButton = new JoystickButton(rightStick, RobotMap.TRANSMISSION_SPEED_BUTTON);
+	private JoystickButton shiftTorqueButton = new JoystickButton(rightStick, RobotMap.TRANSMISSION_TORQUE_BUTTON);
 	private JoystickButton rightTrigger = new JoystickButton(rightStick, 1);
 	
 	public OI() {
